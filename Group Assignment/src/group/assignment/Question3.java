@@ -21,10 +21,15 @@ public class Question3 {
         int count = 0;
         int max = -2147483648 , min = 2147483647 ; // using the max and min int values as defaults 
         int primeCount = 0 , primeTotal = 0, numCheck;
-        boolean isPrime = true; 
+        
+        
+        //program Description for user 
+        System.out.println("This program will acquire integer inputs and display the largest \n" +
+                               "and smallest numbers and the number and summation of prime numbers.\n" +
+                               "Type 0 to finish.");
 
         // Start an infinte loop to input the integers
-        while ( true ) { 
+        while ( true ) {
             System.out.print("? ");
             // Create an input object to allow user to key in values 
             Scanner input = new Scanner(System.in);
@@ -69,6 +74,7 @@ public class Question3 {
             
                 // Check if number is prime 
                 numCheck = Number ;
+                boolean isPrime = true;
                 for(int i=2; i < numCheck; i++) {
                     if((numCheck % i == 0) || numCheck != 1){
                         isPrime = false;
