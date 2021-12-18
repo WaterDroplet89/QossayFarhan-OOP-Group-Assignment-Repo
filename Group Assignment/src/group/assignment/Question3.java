@@ -9,40 +9,30 @@ package group.assignment;
 public class Question3 {
     public static void main(String[] args) {
         
-        int Number = 0;
+        int Number;
         int Sentinel = 0; 
         int count = 0;
         int max = -2147483648 , min = 2147483647 ;
 
         while ( true ) { 
-            
-            if (Number != Sentinel){
-                System.out.print("? ");
-                Scanner input = new Scanner(System.in);
-                Number = input.nextInt();
-                count += 1;
-                
-                if (Number > max ){
-                    max = Number ; 
-                }
-                
-                if ( Number < min ){
-                    min = Number ;    
-            }
-            else{
+            System.out.print("? ");
+            Scanner input = new Scanner(System.in);
+            Number = input.nextInt();
+            if (Number == Sentinel){
                 break;
             }
+            count += 1;
+                
+            if (Number > max ){
+                max = Number ; 
+                }
+                
+            if ( Number < min ){
+                min = Number ;    
             }
-           
-        }
-        
-        
-            System.out.println(max);
-            System.out.println(min);
-           
     }
+        System.out.println(max);
+        System.out.println(min);
+    }
+}
   
-}
-
-    
-}
